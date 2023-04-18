@@ -1,0 +1,33 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "a command-line application that dynamically generates a professional README.md file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EGARRISXN/readme-generator-module-9.git"
+  },
+  "keywords": [
+    "git",
+    "repository",
+    "git",
+    "repo",
+    "readme",
+    "readme.md",
+    "generator",
+    "command-line",
+    "application"
+  ],
+  "author": "Ethan Garrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EGARRISXN/readme-generator-module-9/issues"
+  },
+  "homepage": "https://github.com/EGARRISXN/readme-generator-module-9#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}

@@ -82,7 +82,7 @@ const questions = [
 ];
   
 //Function to write README file
-function writeToFile(fileName, data) {
+const writeToFile = function(fileName, data) {
     fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=> {
         if(err){
             console.log(err)
@@ -103,10 +103,3 @@ function init() {
   
 //Function call to initialize app
 init();
-
-
-
-//the inquirer prompt array will take the questions as its argument
-//the callback will use the generateMarkdown module as the source of data
-//pass the data (call it answers or whatever) into generateMarkdown
-//data passing is a big core of this exercise

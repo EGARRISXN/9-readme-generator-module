@@ -9,74 +9,98 @@ const generateMarkdown = require('./markdown/generatemarkdown');
 const questions = [    
     {
     type: 'input',
-    message: 'What is the title of the program?',
+    message: 'What is the title of your project?',
     name: 'title',
     validate: titleInput => {
         if (titleInput) {
             return true;
         } else {
-            console.log('Please enter the title of the program.');
+            console.log('Please enter a title for your project.');
             return false;
         }
     }},
     {
     type: 'input',
-    message: 'What is a brief description of this program?',
+    message: 'Please give a brief description of your project?',
     name: 'description',
     validate: descriptionInput => {
         if (descriptionInput) {
             return true;
         } else {
-            console.log('Please enter a brief description of this program.');
+            console.log('Please give a description of your project.');
             return false;
         }
     }},
     {
     type: 'input',
-    message: 'How do you install this program?',
+    message: 'How do you install this project?',
     name: 'installation',
     validate: installationInput => {
         if (installationInput) {
             return true;
         } else {
-            console.log('Please describe how to install this program.');
+            console.log('Please explain how to install this project.');
             return false;
         }
     }},
     {
     type: 'input',
-    message: 'How do you run this program?',
+    message: 'How do you run this project?',
     name: 'usage',
     validate: usageInput => {
         if (usageInput) {
             return true;
         } else {
-            console.log('Please describe how to run this program.');
-            return false;
-        }
-    }},
-    {
-    type: 'list',
-    message: 'Did you use a license for this program?',
-    name: 'license',
-    choices: ['The MIT License', 'Apache 2.0 License', 'GNU GPL v3', 'None'],
-    validate: licenseInput => {
-        if (licenseInput) {
-            return true;
-        } else {
-            console.log('Please enter a license for this program.');
+            console.log('Please explain how to run this project.');
             return false;
         }
     }},
     {
     type: 'input',
-    message: 'Did you have any contributors for this program?',
+    message: 'Did you have any contributors on this project?',
     name: 'contributors',
     validate: contributorsInput => {
         if (contributorsInput) {
             return true;
         } else {
-            console.log('Please list any contributors for this program.');
+            console.log('Please list any contributors you had on this project.');
+            return false;
+        }
+    }},
+    {
+    type: 'input',
+    message: 'What is your email address?',
+    name: 'email',
+    validate: emailInput => {
+        if (emailInput) {
+            return true;
+        } else {
+            console.log('Please list your email address.');
+            return false;
+        }
+    }},
+    {
+    type: 'input',
+    message: 'What is your GitHub username?',
+    name: 'github',
+    validate: githubInput => {
+        if (githubInput) {
+            return true;
+        } else {
+            console.log('Please list your GitHub username.');
+            return false;
+        }
+    }},
+    {
+    type: 'list',
+    message: 'Did you use a license for this project?',
+    name: 'license',
+    choices: ['MIT', 'Apache 2.0', 'GPL v3', 'None of the above.'],
+    validate: licenseInput => {
+        if (licenseInput) {
+            return true;
+        } else {
+            console.log('Please chose a license or select "None of the above.');
             return false;
         }
     }},
@@ -98,7 +122,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((responses) => {
         console.log('Creating Professional README.md file...');
-        writeToFile('./final_readme/README.md', generateMarkdown({ ...responses }))
+        writeToFile('../README.md', generateMarkdown({ ...responses }))
     });
 };
   

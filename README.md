@@ -26,7 +26,7 @@
   
   Just use it.
   
-  Note: To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, and add it to your README.
+![Screenshot (45)](https://user-images.githubusercontent.com/126130230/233538050-b37b627d-f1a3-401c-a83d-0aa7e7038b5b.png)
   
   ## Contributors
   

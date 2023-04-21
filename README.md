@@ -1,15 +1,15 @@
 
   # Title
   
-  d
+  Module 9
 
   ## License
 
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+  ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
   
   ## Description
   
-  d
+  Here is a description.
   
   If your README is long, add a table of contents to make it easy for users to find what they need.
   
@@ -20,22 +20,22 @@
   
   ## Installation
   
-  d
+  Just do it.
   
   ## Usage
   
-  d
+  Just use it.
   
   Note: To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, and add it to your README.
   
   ## Contributors
   
-  d
+  Me.
 
   ## Contact Information
 
-  dd
-  d
+  e@gmail.com
+  e@github
   
   ## License
   

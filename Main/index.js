@@ -1,7 +1,8 @@
 //Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('../Main/utilities/generatemarkdown');
+const path = require('path');
+const generateMarkdown = require('./markdown/generatemarkdown');
 
 
 //Array of questions for user input
@@ -20,13 +21,13 @@ const questions = [
     }},
     {
     type: 'input',
-    message: 'What is a brief description of the program?',
+    message: 'What is a brief description of this program?',
     name: 'description',
     validate: descriptionInput => {
         if (descriptionInput) {
             return true;
         } else {
-            console.log('Please enter a brief description of the program.');
+            console.log('Please enter a brief description of this program.');
             return false;
         }
     }},
@@ -44,7 +45,7 @@ const questions = [
     }},
     {
     type: 'input',
-    message: 'How do you run the program?',
+    message: 'How do you run this program?',
     name: 'usage',
     validate: usageInput => {
         if (usageInput) {
@@ -58,7 +59,7 @@ const questions = [
     type: 'list',
     message: 'Did you use a license for this program?',
     name: 'license',
-    choices: ['MIT', 'APACHE 2.0', 'GPL v3.0', 'NONE'],
+    choices: ['The MIT License', 'Apache 2.0 License', 'GNU GPL v3', 'None'],
     validate: licenseInput => {
         if (licenseInput) {
             return true;
@@ -80,24 +81,24 @@ const questions = [
         }
     }},
 ];
-  
+
+
 //Function to write README file
-const writeToFile = function(fileName, data) {
-    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=> {
-        if(err){
-            console.log(err)
-        }
-        console.log('README.md complete!');
-    })
+function writeToFile(fileName, data) {
+    return fs.writeFile(path.join(process.cwd(), fileName), data, err => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(`File ${fileName} created successfully!`);
+      }
+    });
 }
-  
+
 //Function that initializes the app
 function init() {
-    inquirer.prompt(questions).then(function(response) {
-        console.log(response);
-
-    let data = generateMarkdown(response);
-        writeToFile(data)
+    inquirer.prompt(questions).then((responses) => {
+        console.log('Creating Professional README.md file...');
+        writeToFile('./final_readme/README.md', generateMarkdown({ ...responses }))
     });
 };
   

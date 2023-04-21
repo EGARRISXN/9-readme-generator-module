@@ -24,7 +24,7 @@
   
   ## Usage
   
-  Just use it.
+Video link - https://drive.google.com/file/d/1MX_jE43mnoUxW2TcAKw6ymPPF87OcG29/view
   
 ![Screenshot (45)](https://user-images.githubusercontent.com/126130230/233538050-b37b627d-f1a3-401c-a83d-0aa7e7038b5b.png)
   
@@ -34,8 +34,9 @@
 
   ## Contact Information
 
-  egarrisxn@gmail.com
-  egarrisxn
+  Email: egarrisxn@gmail.com
+
+  GitHub: egarrisxn
   
   ## License
   

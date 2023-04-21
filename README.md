@@ -34,8 +34,8 @@
 
   ## Contact Information
 
-  e@gmail.com
-  e@github
+  egarrisxn@gmail.com
+  egarrisxn
   
   ## License
   
